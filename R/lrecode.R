@@ -27,7 +27,7 @@ for (i in 1:length(var)) {
 } 
 
 else {
-  stop("var or value list doesn't have the same size")
+  stop("var or list values doesn't have the same size")
 
 }
 }

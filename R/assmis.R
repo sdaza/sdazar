@@ -11,24 +11,8 @@ assmis  <- function(dat, var, codes) {
 
   if (sum(class(dat) %in% c("data.frame", "data.table")) > 0) {
 
-  pkgTest <- function(x) {
-
-    is.installed <- function(mypkg) is.element(mypkg, installed.packages()[,1])
-
-    if (!is.installed(x))
-    {
-      install.packages(x)
-      if(!require(x , character.only = TRUE)) stop("Package not found")
-    }
-    else {
-      require(x, character.only = TRUE)
-    }
-  }
-
-  pkgTest("data.table")
-
   if (class(var) %in% "list" & class(codes) %in%  "list"
-      & (length(var)==length(codes) ))
+      & (length(var) == length(codes) ))
 
   {
 
@@ -38,8 +22,8 @@ assmis  <- function(dat, var, codes) {
 
       for(j in 1:length(var[[i]])) {
         chari <-  paste0(var[[i]][j], ' %in% ' , 'codes[[', i, ']]')
-        charj <-  paste0(var[[i]][j], ':= NA_integer_')
-        dt[eval(parse(text=chari)), eval(parse(text=charj))]
+        charj <-  paste0(var[[i]][j], ':= NA')
+        dt[eval(parse(text = chari)), eval(parse(text = charj))]
 
       }
     }
@@ -51,12 +35,14 @@ assmis  <- function(dat, var, codes) {
     else if  (class(dat)[1] == "data.frame") {
       return(r  <- data.frame(dt))
     }
+
   }
   else {
     stop("Variables or codes are not defined as lists, or lists' elements are not the same")
   }
   }
       else{
-        stop("The first object is not a data.frame or a data.table")
+        stop("The first object is not a data.frame or data.table")
       }
+  print(". . . . . .  Missing data assignment done!")
 }

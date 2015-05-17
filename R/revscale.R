@@ -7,24 +7,7 @@
 #' @examples
 #' revscale(dat, "var", "newvar")
 revscale  <- function(dat, var, nvar) {
-  if (sum(class(dat) %in% c("data.frame", "data.table"))>0) {
-
-  pkgTest <- function(x) {
-
-    is.installed <- function(mypkg) is.element(mypkg, installed.packages()[,1])
-
-    if (!is.installed(x))
-    {
-      install.packages(x)
-      if(!require(x , character.only = TRUE)) stop("Package not found")
-    }
-    else {
-      require(x, character.only = TRUE)
-    }
-  }
-
-  pkgTest("data.table")
-
+ 
   dt  <- data.table(dat)
 
   if (length(var)==length(nvar)) {
@@ -35,7 +18,7 @@ revscale  <- function(dat, var, nvar) {
       dt[, eval(parse(text=char))]
 
     }
-    if (class(dat)[1]=="data.table") {
+    if (class(dat)[1] == "data.table") {
       return(r <- dt)
     }
 
@@ -45,9 +28,5 @@ revscale  <- function(dat, var, nvar) {
 }
   else {
     stop("Number of old and new variables is not same")
-  }
-}
-  else{
-    stop("The first object is not a data.frame or a data.table")
   }
 }
