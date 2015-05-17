@@ -4,12 +4,12 @@
 \alias{formulas}
 \title{Formulas for linear models.}
 \usage{
-formulas(var1, var2, sym1 = "~", sym2 = "+")
+formulas(var1, vars2, sym1 = "~", sym2 = "+")
 }
 \arguments{
 \item{var1}{Dependent variable (character).}
 
-\item{var2}{Independent variables (character).}
+\item{vars2}{Independent variables (character).}
 
 \item{sym1}{First operator (between dependent and independent variables)}
 

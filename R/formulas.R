@@ -8,6 +8,6 @@
 #' @examples
 #' # formulas(c("var1", "var2", "~", "+"))
 formulas <- function(var1, vars2, sym1 = "~", sym2 = "+") {
-f <- as.formula(paste0(var1, sym1), paste0(paste0(vars2, collapse = sym2)))
+f <- as.formula(paste0( paste0(var1, sym1), paste0(vars2, collapse = sym2)))
 return(f)
 }
