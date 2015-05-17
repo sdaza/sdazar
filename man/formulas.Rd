@@ -4,7 +4,7 @@
 \alias{formulas}
 \title{Formulas for linear models.}
 \usage{
-formulas(var1, var2, sym1, sym2)
+formulas(var1, var2, sym1 = "~", sym2 = "+")
 }
 \arguments{
 \item{var1}{Dependent variable (character).}
