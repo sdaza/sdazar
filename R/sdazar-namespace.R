@@ -11,4 +11,6 @@
 #' @export Sums
 #' @export Max
 #' @export Min
+#' @export factors
+#' @export numerics
 NULL
