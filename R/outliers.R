@@ -1,5 +1,5 @@
 #' @title Identify outliers.
-#' @description Function to identify outliers
+#' @description Function to identify outliers.
 #' @param c Threshold value.
 #' @param values Logical. If it is \code{TRUE}, will show outlier values.
 #' @examples

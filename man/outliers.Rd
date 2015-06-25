@@ -12,7 +12,7 @@ outliers(x, c = 1.5, values = FALSE)
 \item{values}{Logical. If it is \code{TRUE}, will show outlier values.}
 }
 \description{
-Function to identify outliers
+Function to identify outliers.
 }
 \examples{
 outliers(x = c(1,2,3,4,100,21000,20021, -122332), values = TRUE)
