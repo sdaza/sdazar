@@ -1,6 +1,6 @@
 #' @title Identify outliers.
 #' @description Function to identify outliers
-#' @param c Thresold value.
+#' @param c Threshold value.
 #' @param values Logical. If it is \code{TRUE}, will show outlier values.
 #' @examples
 #' outliers(x = c(1,2,3,4,100,21000,20021, -122332), values = TRUE)

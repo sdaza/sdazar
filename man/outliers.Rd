@@ -7,7 +7,7 @@
 outliers(x, c = 1.5, values = FALSE)
 }
 \arguments{
-\item{c}{Thresold value.}
+\item{c}{Threshold value.}
 
 \item{values}{Logical. If it is \code{TRUE}, will show outlier values.}
 }

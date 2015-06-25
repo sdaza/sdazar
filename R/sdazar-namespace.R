@@ -13,4 +13,5 @@
 #' @export Min
 #' @export factors
 #' @export numerics
+#' @export outliers
 NULL
