@@ -14,4 +14,5 @@
 #' @export factors
 #' @export numerics
 #' @export outliers
+#' @export KnitPost
 NULL
