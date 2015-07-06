@@ -10,6 +10,6 @@ library(sdazar)
 
 You have to install `devtools` in R first!
 
-### How to use it ?
+### How to use it?
 
 `?sdazar`
