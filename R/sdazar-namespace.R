@@ -15,4 +15,5 @@
 #' @export numerics
 #' @export outliers
 #' @export KnitPost
+#' @export countmis
 NULL
