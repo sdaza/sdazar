@@ -16,4 +16,5 @@
 #' @export outliers
 #' @export KnitPost
 #' @export countmis
+#' @export rowscore
 NULL

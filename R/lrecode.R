@@ -1,4 +1,4 @@
-#' @title Recode variables.
+#' @title Recode variables (create new variables).
 #' @description Recode variables.
 #' @param dat Datatable object.
 #' @param var Character or vector of characters with variable names.

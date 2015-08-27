@@ -2,7 +2,7 @@
 % Please edit documentation in R/lrecode.R
 \name{lrecode}
 \alias{lrecode}
-\title{Recode variables.}
+\title{Recode variables (create new variables).}
 \usage{
 lrecode(dat, var, newvar, old, new)
 }
