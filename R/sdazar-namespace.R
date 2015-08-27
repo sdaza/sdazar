@@ -17,4 +17,5 @@
 #' @export KnitPost
 #' @export countmis
 #' @export rowscore
+#' @export ci
 NULL
