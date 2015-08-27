@@ -13,7 +13,7 @@
 #' dat <- data.table(a,b,c)
 #' vars <- names(dat)
 #' rowscore(dat, vars)
-rowscore <- function(data, vars, type = "mean", p = 0.5, val = NULL) {
+rowscore <- function(dat, vars, type = "mean", p = 0.5, val = NULL) {
 
    if ( is.null (val) & type == "any") {
       stop("`val` need to be specified wheh using `any`")

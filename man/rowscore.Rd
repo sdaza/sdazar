@@ -4,16 +4,16 @@
 \alias{rowscore}
 \title{Create scores}
 \usage{
-rowscore(data, vars, type = "mean", p = 0.5, val = NULL)
+rowscore(dat, vars, type = "mean", p = 0.5, val = NULL)
 }
 \arguments{
+\item{dat}{`data.table` object.}
+
 \item{vars}{Character vector with name of variables.}
 
 \item{type}{Type of score (`mean` or `any`).}
 
 \item{p}{Proportion of variables with valid values to compute mean.}
-
-\item{dat}{`data.table` object.}
 
 \item{values}{Values used to define `any` index.}
 }
