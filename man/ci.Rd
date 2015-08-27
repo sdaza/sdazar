@@ -2,26 +2,25 @@
 % Please edit documentation in R/ci.R
 \name{ci}
 \alias{ci}
-\title{Computes confidence interval (CI)}
+\alias{lci}
+\alias{uci}
+\title{Computes confidence intervals (function for tables)}
 \usage{
-ci(x, type = "upper", cl = 0.95)
+uci(x, cl = 0.95)
+
+lci(x, cl = 0.95)
 }
 \arguments{
-\item{x}{A numeric vector.}
+\item{x}{Numeric vector.}
 
-\item{type}{`upper` or `lower` limit of the confidence interval (default = `upper`).}
-
-\item{cl}{Confidence level (default = 0.95)}
-}
-\value{
-Returns one of the limits of the confidence interval.
+\item{cl}{Level of confidence,}
 }
 \description{
-Computes upper and lower confidence intervals of a variable
+Upper and lower limit of a confidence interval.
 }
 \examples{
 x <- runif(100, 0)
-ci(x)
-ci(x, type = "lower")
+uci(x)
+lci(x)
 }
 

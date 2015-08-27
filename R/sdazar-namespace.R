@@ -17,5 +17,7 @@
 #' @export KnitPost
 #' @export countmis
 #' @export rowscore
-#' @export ci
+#' @export uci
+#' @export lci
+#' @export getdummies
 NULL
