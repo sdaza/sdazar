@@ -18,8 +18,6 @@ getdummies <- function(dat, vars){
   dat[, paste0(vars, "." , levels(get(vars)))] -> new.names
   dat[, (new.names) := transpose(lapply(get(vars),
                                         FUN = function(x) { as.numeric(x == levels(get(vars)))})) ]
-
-  numerics(dat, vars)
   cat(paste("\nNew variables: ", paste0(new.names, collapse = ", ")))
   return(dat)
 }
