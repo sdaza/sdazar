@@ -20,4 +20,5 @@
 #' @export uci
 #' @export lci
 #' @export getdummies
+#' @export mi
 NULL
