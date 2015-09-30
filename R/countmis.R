@@ -16,7 +16,7 @@ if (is.null(vars)) {
   vars <- names(dat)
 }
 
-mis <- sort( sapply(dat, function(x) sum(is.na(x))), decreasing = TRUE)
+mis <- sort( sapply(dat[, vars, with = FALSE], function(x) sum(is.na(x))), decreasing = TRUE)
 
 if (exclude.complete == TRUE) {
 mis <- mis[ mis > 0]

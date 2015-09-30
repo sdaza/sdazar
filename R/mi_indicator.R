@@ -17,7 +17,7 @@ if (is.null(vars)) {
 }
 
 dat <- data.table(dat)
-nvars <- names(countmis(dat, exclude.complete = TRUE))
+nvars <- names(countmis(dat, vars, exclude.complete = TRUE))
 mivars <- paste0("mi_", nvars) 
 
 for (i in 1:length(nvars)) {
