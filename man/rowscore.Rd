@@ -4,7 +4,7 @@
 \alias{rowscore}
 \title{Create scores}
 \usage{
-rowscore(dat, vars, type = "mean", p = 0.5, val = NULL)
+rowscore(dat, vars, type = "mean", p = 0.5, nitems = NULL, val = NULL)
 }
 \arguments{
 \item{dat}{`data.table` object.}
@@ -13,7 +13,9 @@ rowscore(dat, vars, type = "mean", p = 0.5, val = NULL)
 
 \item{type}{Type of score (`mean` or `any`).}
 
-\item{p}{Proportion of variables with valid values to compute mean.}
+\item{p}{Proportion of items with valid values to compute mean.}
+
+\item{nitems}{Number of items with valid values to compute mean.}
 
 \item{values}{Values used to define `any` index.}
 }

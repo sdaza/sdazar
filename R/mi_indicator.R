@@ -10,15 +10,19 @@
 #' dat <- data.table(a,b,c)
 #' vars <- names(dat)
 #' mi_indicator(dat, vars)
-mi <- function(dat, vars) {
+mi_indicator <- function(dat, vars = NULL) {
+
+if (is.null(vars)) {
+  vars <- names(dat)
+}
 
 dat <- data.table(dat)
-vars <- names(countmis(dat, vars))
-mivars <- paste0("mi_", vars) 
+nvars <- names(countmis(dat, exclude.complete = TRUE))
+mivars <- paste0("mi_", nvars) 
 
-for (i in 1:length(vars)) {
+for (i in 1:length(nvars)) {
 
-  dat[, mivars[i] := ifelse(is.na(dat[, vars[i], with = FALSE]), 1, 0)]
+  dat[, mivars[i] := ifelse(is.na(dat[, nvars[i], with = FALSE]), 1, 0)]
 
 }
 

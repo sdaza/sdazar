@@ -21,4 +21,5 @@
 #' @export lci
 #' @export getdummies
 #' @export mi
+#' @export mi_indicator
 NULL

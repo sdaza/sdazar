@@ -4,10 +4,12 @@
 \alias{countmis}
 \title{Count missing data.}
 \usage{
-countmis(dat, pct = TRUE, exclude.complete = TRUE)
+countmis(dat, vars = NULL, pct = TRUE, exclude.complete = TRUE)
 }
 \arguments{
 \item{dat}{Data frame.}
+
+\item{vars}{Vector with name of variables.}
 
 \item{pct}{Logical. If this is \code{TRUE} will show percentage of missing data by variable.}
 
@@ -17,6 +19,10 @@ countmis(dat, pct = TRUE, exclude.complete = TRUE)
 Function to count missing data.
 }
 \examples{
+a <- c(NA,2,3,4, NA)
+b <- c(2,3,4,NA, 3)
+c <- c(1,2,3,1, 1)
+dat <- data.table(a,b,c)
 countmis(dat, pct = FALSE)
 }
 
