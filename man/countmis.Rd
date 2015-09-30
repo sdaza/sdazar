@@ -4,12 +4,14 @@
 \alias{countmis}
 \title{Count missing data.}
 \usage{
-countmis(dat, pct = TRUE)
+countmis(dat, pct = TRUE, exclude.complete = TRUE)
 }
 \arguments{
 \item{dat}{Data frame.}
 
 \item{pct}{Logical. If this is \code{TRUE} will show percentage of missing data by variable.}
+
+\item{exclude.complete}{Logical. Exclude complete variables from the output.}
 }
 \description{
 Function to count missing data.
