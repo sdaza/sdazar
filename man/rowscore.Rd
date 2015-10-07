@@ -11,7 +11,7 @@ rowscore(dat, vars, type = "mean", p = 0.5, nitems = NULL, val = NULL)
 
 \item{vars}{Character vector with name of variables.}
 
-\item{type}{Type of score (`mean`, `any`, `parcel`). `parcel` selects the items with less missing data based on `p` (once the items are define a mean is computed using complete cases).}
+\item{type}{Type of score (`mean`, `any`, `parcel`). `parcel` selects the items with less missing data based on `p` (once the items are defined a mean is computed using complete cases).}
 
 \item{p}{Proportion of items with valid values to compute mean.}
 
