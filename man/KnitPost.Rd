@@ -4,7 +4,7 @@
 \alias{KnitPost}
 \title{Create posts from Rmd files for blogging.}
 \usage{
-KnitPost(input, base.url = "/", plot.path = NULL)
+KnitPost(input, base.url = "", fig.path = NULL)
 }
 \arguments{
 \item{input}{Path of Rmd file.}
