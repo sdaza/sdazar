@@ -4,7 +4,8 @@
 \alias{rowscore}
 \title{Create scores}
 \usage{
-rowscore(dat, vars, type = "mean", p = 0.5, nitems = NULL, val = NULL)
+rowscore(dat, vars, type = "mean", p = 0.5, nitems = NULL, val = NULL,
+  complete.parcel = TRUE)
 }
 \arguments{
 \item{dat}{`data.table` object.}
@@ -16,6 +17,8 @@ rowscore(dat, vars, type = "mean", p = 0.5, nitems = NULL, val = NULL)
 \item{p}{Proportion of items with valid values to compute mean.}
 
 \item{nitems}{Number of items with valid values to compute mean.}
+
+\item{complete.parcel}{If parcels use complete data only.}
 
 \item{values}{Values used to define `any` index.}
 }

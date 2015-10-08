@@ -6,6 +6,7 @@
 #' @param p  Proportion of items with valid values to compute mean.
 #' @param nitems Number of items with valid values to compute mean.
 #' @param values Values used to define `any` index.
+#' @param complete.parcel If parcels use complete data only.
 #' @return Returns a vector with scores.
 #' @examples
 #' a <- c(NA,2,3,4, NA)
@@ -14,7 +15,7 @@
 #' dat <- data.table(a,b,c)
 #' vars <- names(dat)
 #' rowscore(dat, vars)
-rowscore <- function (dat, vars, type = "mean", p = 0.5, nitems = NULL, val = NULL) {
+rowscore <- function (dat, vars, type = "mean", p = 0.5, nitems = NULL, val = NULL, complete.parcel = TRUE) {
 temp <- data.table(dat)
 temp <- temp[, vars, with = FALSE]
 
@@ -58,8 +59,12 @@ temp <- temp[, vars, with = FALSE]
     setkey(mtemp, tid)
 
     # complete cases mean computation
-    out <- mtemp[variable %in% pnames, .(mvalue = mean(value)), by = tid][, mvalue]
-
+    if (complete.parcel == TRUE) {
+      out <- mtemp[variable %in% pnames, .(mvalue = mean(value)), by = tid][, mvalue]
+    }
+    else {
+      out <- mtemp[variable %in% pnames, .(mvalue = mean(value, na.rm = TRUE)), by = tid][, mvalue]
+    }
   }
 
   return(out)
