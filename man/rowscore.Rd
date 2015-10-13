@@ -4,23 +4,20 @@
 \alias{rowscore}
 \title{Create scores}
 \usage{
-rowscore(dat, vars, type = "mean", p = 0.5, nitems = NULL, val = NULL,
-  complete.parcel = TRUE)
+rowscore(dat, vars, type = "mean", p = 1/2, nitems = NULL, val = NULL)
 }
 \arguments{
-\item{dat}{`data.table` object.}
+\item{dat}{\code{data.table} or \code{data.frame}.}
 
 \item{vars}{Character vector with name of variables.}
 
-\item{type}{Type of score (`mean`, `any`, `parcel`). `parcel` selects the items with less missing data based on `p` (once the items are defined a mean is computed using complete cases).}
+\item{type}{Type of score (\code{mean}, \code{any}, \code{parcel}). \code{parcel} selects items based on \code{p}. Once the items are selected the average with the available items is computed.}
 
-\item{p}{Proportion of items with valid values to compute mean.}
+\item{p}{Proportion of items with valid values to compute the average.}
 
-\item{nitems}{Number of items with valid values to compute mean.}
+\item{nitems}{Number of items with valid values to compute the average.}
 
-\item{complete.parcel}{If parcels use complete data only.}
-
-\item{values}{Values used to define `any` index.}
+\item{values}{Values used to define \code{any} index}
 }
 \value{
 Returns a vector with scores.
