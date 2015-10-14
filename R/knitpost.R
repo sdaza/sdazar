@@ -1,7 +1,7 @@
 #' @title Create posts from Rmd files for blogging.
 #' @description Create posts from .Rmd files for blogging.
 #' @param input Path of Rmd file.
-KnitPost <- function(input, base.url="", fig.path = NULL) {
+KnitPost <- function(input, output = NULL, base.url="", fig.path = NULL) {
   knitr::opts_knit$set(base.url = base.url)
 
   # knitr::opts_chunk$set(comment = NA)
@@ -9,5 +9,5 @@ KnitPost <- function(input, base.url="", fig.path = NULL) {
   knitr::opts_chunk$set(fig.cap = "center")
 
   knitr::render_jekyll()
-  knitr::knit(input, envir = parent.frame())
+  knitr::knit(input, output = output, envir = parent.frame())
 }

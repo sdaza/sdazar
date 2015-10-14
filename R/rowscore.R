@@ -20,10 +20,10 @@ temp <- data.table(dat)
 temp <- temp[, vars, with = FALSE]
 
   if (is.null(val) & type == "any") {
-    stop("`val` need to be specified wheh using `any`")
+    stop("val need to be specified wheh using any")
   }
   if (!is.character(vars)) {
-    stop("`vars` has to be a character vector")
+    stop("vars has to be a character vector")
   }
   if (!is.na(p) & is.null(nitems)) {
   temp[, z := apply(temp, 1, function(x) sum(!is.na(x)) / length(x))]
@@ -36,12 +36,14 @@ temp <- temp[, vars, with = FALSE]
 
   if (type == "mean") {
     out <- temp[, ifelse( z >= p, apply( temp[, vars, with = FALSE], 1, mean, na.rm = TRUE), NA)]
-    # remove this residual variable
      }
 
   if (type == "any") {
-    out <- temp[, ifelse( apply(temp[, vars, with = FALSE], 1,
-                               function (x) all( is.na(x) ) ), NA, apply(temp, 1, function(x) as.numeric( any(x %in% val)) ))]
+
+    out <- apply(temp[, vars, with = FALSE], 1, function(x) any(x %in% val) )
+    # missing when all the items are missing
+    out[apply(temp[, vars, with = FALSE], 1, function (x) all( is.na(x) ) )] <- NA 
+    out <- as.numeric(out)
 
   }
 
@@ -51,13 +53,14 @@ temp <- temp[, vars, with = FALSE]
     # select items with less missing data
     pnames <- names(rev(countmis(temp, vars, exclude.complete = FALSE))[1:nitems])
     rnames <- as.character(na.omit(vars[- which(vars %in% pnames)][1:nitems]))
-
+    
+    # change the format to compute average
     temp <- temp[, tid := 1:.N]
     numerics(temp, vars)
-    mtemp <- melt(temp, id = "tid", measure = vars)
+    mtemp <- data.table::melt(temp, id = "tid", measure = vars)
     setkey(mtemp, tid)
 
-    # complete cases computation
+    # complete computation if any other items have info available
     out1 <- mtemp[variable %in% pnames, .(mvalue = mean(value, na.rm = TRUE)), by = tid]
     ids <- out1[is.na(mvalue), tid]
     out2 <-     mtemp[tid %in% ids & variable %in% rnames, .(mvalue = mean(value, na.rm = TRUE)), by = tid]
