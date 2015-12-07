@@ -7,6 +7,9 @@ Author: Sebastian Daza <sdaza@ssc.wisc.edu>
 Maintainer: Sebastian Daza <sdaza@ssc.wisc.edu>
 Description: My functions.
 License: What license is it under?
-Depends: data.table (>= 1.9.5), knitr (>= 1.10.5)
+Depends:
+    data.table (>= 1.9.5),
+    knitr (>= 1.10.5)
 LazyData: true
 URL: http://github.com/sdaza/sdazar
+RoxygenNote: 5.0.1
