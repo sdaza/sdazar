@@ -22,7 +22,7 @@ getdummies <- function(dat, vars) {
 
   for (i in 1:length(vars)) {
     inds[[i]] <- na.omit(unique(dat[, vars[i], with = FALSE]))[[1]]
-    nvars[[i]] <- paste0(vars[i], ".", inds[[i]])
+    nvars[[i]] <- paste0(vars[i], "_", inds[[i]])
     dat[, (nvars[[i]]) := lapply(inds[[i]], function(x) as.numeric(get(vars[i]) == x))]
   }
 
