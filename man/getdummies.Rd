@@ -25,4 +25,3 @@ dat <- data.table(a,b,c)
 vars <- names(dat)
 getdummies(dat, "a")
 }
-

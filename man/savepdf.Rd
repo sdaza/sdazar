@@ -17,4 +17,3 @@ savepdf("myplot")
 plot(x)
 dev.off()
 }
-

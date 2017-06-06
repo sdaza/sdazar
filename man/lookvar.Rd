@@ -20,4 +20,3 @@ The \code{getvars} function gets ACS variable names from text containing formula
 \examples{
 lookvar(dat, "gender")
 }
-

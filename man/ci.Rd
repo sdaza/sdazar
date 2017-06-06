@@ -2,8 +2,8 @@
 % Please edit documentation in R/ci.R
 \name{ci}
 \alias{ci}
-\alias{lci}
 \alias{uci}
+\alias{lci}
 \title{Computes confidence intervals (function for tables)}
 \usage{
 uci(x, cl = 0.95)
@@ -23,4 +23,3 @@ x <- runif(100, 0)
 uci(x)
 lci(x)
 }
-

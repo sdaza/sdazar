@@ -17,4 +17,3 @@ Function to identify outliers.
 \examples{
 outliers(x = c(1,2,3,4,100,21000,20021, -122332), values = TRUE)
 }
-

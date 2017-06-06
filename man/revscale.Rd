@@ -22,4 +22,3 @@ Reverse escale.
 \examples{
 revscale(dat, "var", "newvar")
 }
-

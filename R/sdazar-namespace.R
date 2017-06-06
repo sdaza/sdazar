@@ -16,6 +16,7 @@
 #' @export outliers
 #' @export KnitPost
 #' @export countmis
+#' @export parmice
 #' @export rowscore
 #' @export uci
 #' @export lci

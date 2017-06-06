@@ -22,4 +22,3 @@ Assign NA to missing data codes.
 \examples{
 dat <- assmis(dat, list(dvar), list(c(9,99)))
 }
-

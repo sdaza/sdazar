@@ -25,4 +25,3 @@ c <- c(1,2,3,1, 1)
 dat <- data.table(a,b,c)
 countmis(dat, pct = FALSE)
 }
-

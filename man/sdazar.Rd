@@ -19,4 +19,3 @@ My functions.
 \author{
 Sebastian Daza \email{sdaza@ssc.wisc.edu}
 }
-

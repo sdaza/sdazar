@@ -1,6 +1,6 @@
 #' sdazar: My functions.
 #'
-#' @description My functions. 
+#' @description My functions.
 #'
 #' @author Sebastian Daza \email{sdaza@@ssc.wisc.edu}
 #'

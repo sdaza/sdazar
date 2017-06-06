@@ -12,4 +12,3 @@ KnitPost(input, output = NULL, base.url = "", fig.path = NULL)
 \description{
 Create posts from .Rmd files for blogging.
 }
-

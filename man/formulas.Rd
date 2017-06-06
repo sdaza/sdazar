@@ -24,4 +24,3 @@ Formulas for linear models.
 \examples{
 # formulas(c("var1", "var2", "~", "+"))
 }
-

@@ -29,4 +29,3 @@ Avoid define the first value as missing, put missing values at the end of the ol
 \examples{
 lrecode(dat, c("var1", "var2"), c("nvar1", "nvar2"), c(1,2,3,4), c(4,3,2,1))
 }
-

@@ -33,4 +33,3 @@ dat <- data.table(a,b,c)
 vars <- names(dat)
 rowscore(dat, vars)
 }
-
